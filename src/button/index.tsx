@@ -1,4 +1,4 @@
-import { defineComponent,PropType,toRefs } from "vue";
+import { defineComponent,PropType,toRefs } from "vue/dist/vue.esm-bundler.js";
 import "uno.css";
 export type IColor = 'black' | 'gray' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink'
 export type ISize = 'small' | 'middle' | 'large' | 'superBig' | 'superSpecialBig' 
