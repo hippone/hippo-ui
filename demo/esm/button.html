@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../dist/style.css">
+  <link rel="stylesheet" href="../../dist/assets/entry.0d4d50aa.css">
+  <script src="../../node_modules/vue/dist/vue.global.js"></script>
+  <script src="../../dist/smart-ui.iife.js"></script>
   <title>Document</title>
 </head>
+
 <body>
   <div id="app"></div>
   <script type="module">
-    import { createApp } from "vue/dist/vue.esm-bundler.js";
-    import SmartyUI,{SFCButton,JSXButton,MyButton} from "../../dist/smart-ui.mjs";
-
+    const { createApp } = Vue
+    console.log('vue', Vue)
+    console.log('SmartyUI', SmartyUI)
     createApp({
-      template:`
-      <SButton>默认按钮</SButton></SButton>`
-    })
-    .component(MyButton.name,MyButton).mount("#app")
+      template: `
+      <div>
+        <div>
+          <SButton color="blue">蓝色按钮</SButton>
+          <SButton color="green">绿色按钮</SButton>
+          <SButton color="gray">灰色按钮</SButton>
+          <SButton color="yellow">黄色按钮</SButton>
+        </div>
+        <div>
+          <SButton color="blue" size="small" plain>朴素按钮</SButton>
+          <SButton color="blue" size="large" plain>朴素按钮</SButton>
+          <SButton color="red" size="superBig" plain>朴素按钮</SButton>
+        </div>
+        <div>
+          <SButton color="blue" size="small" rounded plain>圆角按钮</SButton>
+          <SButton color="green" size="large" rounded plain>长圆角按钮</SButton>
+          <SButton color="gray"  rounded plain>长圆角按钮</SButton>
+          <SButton color="yellow" size="middle" rounded plain>朴素按钮</SButton>
+        </div>
+        <div>
+          <SButton color="blue" size="small" icon="search" plain></SButton>
+          <SButton color="green" size="large" icon="add" plain></SButton>
+          <SButton color="gray" size="superBig" icon="delete" plain></SButton>
+          <SButton color="yellow" size="middle" icon="check" plain></SButton>
+        </div>
+      </div>`
+    }).use(SmartyUI.Default).mount('#app');
   </script>
 </body>
+
 </html>

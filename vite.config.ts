@@ -24,6 +24,7 @@ export default defineConfig({
     rollupOptions,
     minify: `terser`, // boolean | 'terser' | 'esbuild'
     sourcemap: true, // 输出单独 source文件
+    cssCodeSplit: true,
     lib:{
       entry: "./src/entry.ts",
       name:"SmartyUI",
