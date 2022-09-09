@@ -1,83 +1,98 @@
-import { defineComponent,PropType,toRefs } from "vue/dist/vue.esm-bundler.js";
+import { defineComponent, PropType } from "vue/dist/vue.esm-bundler.js";
 import "uno.css";
-export type IColor = 'black' | 'gray' | 'yellow' | 'green' | 'blue' | 'indigo' | 'purple' | 'pink'
-export type ISize = 'small' | 'middle' | 'large' | 'superBig' | 'superSpecialBig' 
+export type IColor =
+  | "black"
+  | "gray"
+  | "yellow"
+  | "green"
+  | "blue"
+  | "indigo"
+  | "purple"
+  | "pink";
+export type ISize =
+  | "small"
+  | "middle"
+  | "large"
+  | "superBig"
+  | "superSpecialBig";
 export const props = {
-  color:{
+  color: {
     type: String as PropType<IColor>,
-    default: 'blue'
+    default: "blue",
   },
-  size:{
+  size: {
     type: String as PropType<ISize>,
-    default: 'middle'
+    default: "middle",
   },
   plain: {
     type: Boolean,
-    default:false,
+    default: false,
   },
   rounded: {
     type: Boolean,
-    default:false,
+    default: false,
   },
   icon: {
     type: String,
-    default: ""
-  }
-}
+    default: "",
+  },
+};
 export default defineComponent({
-  name:"SButton",
+  name: "SButton",
   props,
-  setup(props,{slots}){
+  setup(props, { slots }) {
     const size = {
-      small:{
-        x:2,
-        y:1,
-        text:"sm"
+      small: {
+        x: 2,
+        y: 1,
+        text: "sm",
       },
-      middle:{
-        x:3,
-        y:1.5,
-        text:"base"
+      middle: {
+        x: 3,
+        y: 1.5,
+        text: "base",
       },
-      large:{
-        x:4,
-        y:2,
-        text:"lg"
+      large: {
+        x: 4,
+        y: 2,
+        text: "lg",
       },
-      superBig:{
-        x:5,
-        y:2.5,
-        text:"xl"
+      superBig: {
+        x: 5,
+        y: 2.5,
+        text: "xl",
       },
-      superSpecialBig:{
-        x:6,
-        y:3,
-        text:"2xl"
+      superSpecialBig: {
+        x: 6,
+        y: 3,
+        text: "2xl",
       },
-    }
-    return ()=><button
-    class={`
+    };
+    return () => (
+      <button
+        class={`
     py-${size[props.size].y}
     px-${size[props.size].x}
     font-semibold
     shadow-md
     ${props.rounded ? "rounded-full" : "rounded-lg"}
     text-${size[props.size].text}
-    text-${props.plain ? props.color+"-500" : "white"}
-    bg-${props.color}-${props.plain ? '300' : '500'}
-    hover:bg-${props.color}-${props.plain ? '400' : '700'}
+    text-${props.plain ? props.color + "-500" : "white"}
+    bg-${props.color}-${props.plain ? "300" : "500"}
+    hover:bg-${props.color}-${props.plain ? "400" : "700"}
     border-${props.color}-${props.plain ? "400" : "500"}
     border-solid
     cursor-pointer
     m-1
     `}
-    >
-      {props.icon !== "" ? (
-        <i class={`i-ic-baseline-${props.icon} p-3`}></i>
-      ) : (
-        ""
-      )}
-      {slots.default ? slots.default() : "Button"}
-    </button>
-  }
-})
+      >
+        {props.icon !== "" ? (
+          <i class={`i-ic-baseline-${props.icon} p-3`}></i>
+        ) : (
+          ""
+        )}
+        {slots.default ? slots.default() : "Button"}
+      </button>
+    );
+  },
+});
