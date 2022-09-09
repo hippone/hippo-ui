@@ -5,7 +5,7 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  Lint:
+  # Lint:
     # Lint任务
   UnitTest:
     # 单元测试任务
@@ -13,7 +13,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-    - uses: pnpm/action-setup@v2.1.0
+    - uses: pnpm/action-setup@v2.2.2
       with:
         version: 7.2.1
     - name: Install modules
