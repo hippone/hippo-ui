@@ -1,0 +1,54 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "total": 3,
+    "workspacePrefix": "D:\\test\\smart-ui-vite"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "docs-vite",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC"
+    },
+    "prefix": "D:\\test\\smart-ui-vite\\packages\\docs-vite"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "D:\\.pnpm-store\\v3",
+    "virtualStoreDir": "D:\\test\\smart-ui-vite\\node_modules\\.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "D:\\test\\smart-ui-vite",
+    "stage": "resolution_started"
+  },
+  "4 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "hippo-ui-vite is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "request": {
+      "url": "https://registry.npmmirror.com/hippo-ui-vite"
+    },
+    "response": {
+      "size": 0
+    },
+    "pkgName": "hippo-ui-vite",
+    "spec": {
+      "fetchSpec": "latest",
+      "name": "hippo-ui-vite",
+      "type": "tag"
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmmirror.com/hippo-ui-vite: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "pnpm: GET https://registry.npmmirror.com/hippo-ui-vite: Not Found - 404\n    at RetryOperation._fn (C:\\Users\\L\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:85463:19)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    }
+  }
+}

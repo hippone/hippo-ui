@@ -1,16 +1,17 @@
 {
-  "name": "smart-ui-vite",
+  "name": "docs-vite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "node ./scripts/preinstall.js"
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "3.0.7"
+    "hippo-ui-vite": "workspace:^1.0.0",
+    "vue": "3.2.37"
   }
 }

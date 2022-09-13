@@ -22,8 +22,8 @@ export default defineConfig({
     cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
-      name: "SmartyUI",
-      fileName: "smart-ui",
+      name: "HippoUI",
+      fileName: "hippo-ui",
       formats: ["es", "umd", "iife"],
     },
     outDir: "./dist",

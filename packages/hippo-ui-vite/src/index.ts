@@ -1,8 +1,8 @@
 import { createApp } from "vue";
-import SmartyUI from "./entry";
+import HippoUI from "./entry";
 
 createApp({
-  template:`
+  template: `
   <div>
     <div>
       <SButton color="blue">蓝色按钮</SButton>
@@ -27,5 +27,7 @@ createApp({
       <SButton color="gray" size="superBig" icon="delete" plain></SButton>
       <SButton color="yellow" size="middle" icon="check" plain></SButton>
     </div>
-  </div>`
-}).use(SmartyUI).mount('#app');
+  </div>`,
+})
+  .use(HippoUI)
+  .mount("#app");
