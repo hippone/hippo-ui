@@ -10,7 +10,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "husky": "7.0.4"
+  },
   "dependencies": {
-    "vite": "3.0.7"
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "vite": "^3.0.4"
   }
 }
