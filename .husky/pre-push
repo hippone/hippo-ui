@@ -1,4 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-pnpm run test:run
+echo ====单元测试====
+cd packages/hippo-ui-vite
+pnpm test:run

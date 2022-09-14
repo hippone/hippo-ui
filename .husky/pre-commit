@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-pnpm run lint
+cd packages/hippo-ui-vite
+pnpm lint

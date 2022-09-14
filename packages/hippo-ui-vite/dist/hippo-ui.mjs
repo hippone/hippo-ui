@@ -13019,8 +13019,8 @@ const props = {
     default: ""
   }
 };
-const MyButton = defineComponent({
-  name: "SButton",
+const HButton = defineComponent({
+  name: "HButton",
   props,
   setup(props2, {
     slots
@@ -13075,11 +13075,10 @@ const MyButton = defineComponent({
 });
 const entry = {
   install(app) {
-    app.component(MyButton.name, MyButton);
+    app.component(HButton.name, HButton);
   }
 };
 export {
-  MyButton,
   entry as default
 };
-//# sourceMappingURL=smart-ui.mjs.map
+//# sourceMappingURL=hippo-ui.mjs.map
