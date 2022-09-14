@@ -28,4 +28,4 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTHOR_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
         with:
           default_branch: "publish-hippo-ui-vite"
-          dir: "packages/hippo-ui-vite/dist"
+          dir: "packages/hippo-ui-vite"
