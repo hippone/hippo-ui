@@ -1,11 +1,11 @@
 {
-  "name": "smart-ui-vite",
-  "version": "1.0.0",
+  "name": "smart-admin",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "node ./scripts/preinstall.js"
+    "preinstall": "node ./scripts/preinstall.js",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
   "dependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "vite": "^3.0.4"
+    "vite": "^3.0.4",
+    "vitest": "0.23.2"
   }
 }
