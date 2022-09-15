@@ -1,4 +1,3 @@
-/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
@@ -10,14 +9,15 @@ const rollupOptions = {
     globals: {
       vue: "Vue",
     },
+    assetFileNames: `assets/[name].css`,
   },
 };
 
-export default defineConfig({
+export const config = {
   plugins: [vue(), vueJsx(), Unocss()],
   build: {
     rollupOptions,
-    minify: `terser`, // boolean | 'terser' | 'esbuild'
+    minify: "terser", // boolean | 'terser' | 'esbuild'
     sourcemap: true, // 输出单独 source文件
     cssCodeSplit: true,
     lib: {
@@ -39,4 +39,6 @@ export default defineConfig({
       web: [/.[tj]sx$/],
     },
   },
-});
+};
+
+export default defineConfig(config);

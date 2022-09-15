@@ -1,5 +1,5 @@
 import { App } from "vue";
-import HButton from "./button/Button";
+import HButton from "./Button/Button";
 import "uno.css";
 
 export default {
