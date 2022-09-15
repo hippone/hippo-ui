@@ -18,7 +18,7 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Run Lint
-        run: cd packages/hippo-ui-vite && pnpm run lint
+        run: cd packages/hippo-ui && pnpm run lint
   UnitTest:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -31,4 +31,4 @@ jobs:
       - name: Install modules
         run: pnpm install
       - name: Run Test
-        run: cd packages/hippo-ui-vite && pnpm run test:run
+        run: cd packages/hippo-ui && pnpm run test:run

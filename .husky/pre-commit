@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-cd packages/hippo-ui-vite
+cd packages/hippo-ui
 pnpm lint

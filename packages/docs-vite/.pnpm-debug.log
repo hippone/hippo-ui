@@ -30,25 +30,25 @@
   },
   "4 error pnpm": {
     "code": "ERR_PNPM_FETCH_404",
-    "hint": "hippo-ui-vite is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
+    "hint": "hippo-ui is not in the npm registry, or you have no permission to fetch it.\n\nNo authorization header was set for the request.",
     "request": {
-      "url": "https://registry.npmmirror.com/hippo-ui-vite"
+      "url": "https://registry.npmmirror.com/hippo-ui"
     },
     "response": {
       "size": 0
     },
-    "pkgName": "hippo-ui-vite",
+    "pkgName": "hippo-ui",
     "spec": {
       "fetchSpec": "latest",
-      "name": "hippo-ui-vite",
+      "name": "hippo-ui",
       "type": "tag"
     },
     "pkgsStack": [],
     "err": {
       "name": "pnpm",
-      "message": "GET https://registry.npmmirror.com/hippo-ui-vite: Not Found - 404",
+      "message": "GET https://registry.npmmirror.com/hippo-ui: Not Found - 404",
       "code": "ERR_PNPM_FETCH_404",
-      "stack": "pnpm: GET https://registry.npmmirror.com/hippo-ui-vite: Not Found - 404\n    at RetryOperation._fn (C:\\Users\\L\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:85463:19)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+      "stack": "pnpm: GET https://registry.npmmirror.com/hippo-ui: Not Found - 404\n    at RetryOperation._fn (C:\\Users\\L\\AppData\\Roaming\\npm\\node_modules\\pnpm\\dist\\pnpm.cjs:85463:19)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
     }
   }
 }

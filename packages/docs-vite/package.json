@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hippo-ui-vite": "workspace:^0.1.0",
+    "hippo-ui": "workspace:^0.1.1",
     "vue": "3.2.37"
   }
 }
