@@ -1,24 +1,10 @@
 import { defineComponent, PropType } from "vue";
+import { IColor, ISize } from "./interface";
 import "uno.css";
-export type IColor =
-  | "black"
-  | "gray"
-  | "yellow"
-  | "green"
-  | "blue"
-  | "indigo"
-  | "purple"
-  | "pink";
-export type ISize =
-  | "small"
-  | "middle"
-  | "large"
-  | "superBig"
-  | "superSpecialBig";
 export const props = {
   color: {
     type: String as PropType<IColor>,
-    default: "blue",
+    default: "",
   },
   size: {
     type: String as PropType<ISize>,
@@ -71,27 +57,27 @@ export default defineComponent({
     return () => (
       <button
         class={`
-    py-${size[props.size].y}
-    px-${size[props.size].x}
-    font-semibold
-    shadow-md
-    ${props.rounded ? "rounded-full" : "rounded-lg"}
-    text-${size[props.size].text}
-    text-${props.plain ? props.color + "-500" : "white"}
-    bg-${props.color}-${props.plain ? "300" : "500"}
-    hover:bg-${props.color}-${props.plain ? "400" : "700"}
-    border-${props.color}-${props.plain ? "400" : "500"}
-    border-solid
-    cursor-pointer
-    m-1
-    `}
+          py-${size[props.size].y}
+          px-${size[props.size].x}
+          font-semibold
+          shadow-md
+          ${props.rounded ? "rounded-full" : "rounded-lg"}
+          text-${size[props.size].text}
+          text-${props.plain ? props.color + "-500" : "white"}
+          bg-${props.color}-${props.plain ? "300" : "500"}
+          hover:bg-${props.color}-${props.plain ? "400" : "700"}
+          border-${props.color}-${props.plain ? "400" : "500"}
+          ${props.color ? "border-none" : "border-gray-100"}
+          cursor-pointer
+          m-1
+        `}
       >
         {props.icon !== "" ? (
           <i class={`i-ic-baseline-${props.icon} p-3`}></i>
         ) : (
           ""
         )}
-        {slots.default ? slots.default() : "Button"}
+        {slots.default ? slots.default() : ""}
       </button>
     );
   },
