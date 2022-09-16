@@ -23,6 +23,7 @@ const safelist = [
   ...colors.map((v) => `border-${v}-500`),
   ...colors.map((v) => `text-${v}-500`),
   "text-white",
+  "border-none",
   ...Array.from({ length: 8 }, (_, i) => `px-${i + 1}`),
   ...Array.from({ length: 8 }, (_, i) => `py-${i + 1}`),
   ...["sm", "base", "lg", "xl", "2xl"].map((v) => `text-${v}`),
