@@ -7,38 +7,38 @@
 ```vue
 <template>
   <div style="margin-bottom:20px;">
-    <SButton color="blue">主要按钮</SButton>
-    <SButton color="green">绿色按钮</SButton>
-    <SButton color="gray">灰色按钮</SButton>
-    <SButton color="yellow">黄色按钮</SButton>
-    <SButton color="red">红色按钮</SButton>
+    <HButton color="blue">主要按钮</HButton>
+    <HButton color="green">绿色按钮</HButton>
+    <HButton color="gray">灰色按钮</HButton>
+    <HButton color="yellow">黄色按钮</HButton>
+    <HButton color="red">红色按钮</HButton>
   </div>
   <div style="margin-bottom:20px;"
   >
-    <SButton color="blue" plain>朴素按钮</SButton>
-    <SButton color="green" plain>绿色按钮</SButton>
-    <SButton color="gray" plain>灰色按钮</SButton>
-    <SButton color="yellow" plain>黄色按钮</SButton>
-    <SButton color="red" plain>红色按钮</SButton>
+    <HButton color="blue" plain>朴素按钮</HButton>
+    <HButton color="green" plain>绿色按钮</HButton>
+    <HButton color="gray" plain>灰色按钮</HButton>
+    <HButton color="yellow" plain>黄色按钮</HButton>
+    <HButton color="red" plain>红色按钮</HButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton size="small" plain>小按钮</SButton>
-    <SButton size="middle" plain>中按钮</SButton>
-    <SButton size="large" plain>大按钮</SButton>
+    <HButton size="small" plain>小按钮</HButton>
+    <HButton size="middle" plain>中按钮</HButton>
+    <HButton size="large" plain>大按钮</HButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton color="blue" rounded plain icon="search">搜索按钮</SButton>
-    <SButton color="green" rounded plain icon="edit">编辑按钮</SButton>
-    <SButton color="gray" rounded plain icon="check">成功按钮</SButton>
-    <SButton color="yellow" rounded plain icon="message">提示按钮</SButton>
-    <SButton color="red" rounded plain icon="delete">删除按钮</SButton>
+    <HButton color="blue" rounded plain icon="search">搜索按钮</HButton>
+    <HButton color="green" rounded plain icon="edit">编辑按钮</HButton>
+    <HButton color="gray" rounded plain icon="check">成功按钮</HButton>
+    <HButton color="yellow" rounded plain icon="message">提示按钮</HButton>
+    <HButton color="red" rounded plain icon="delete">删除按钮</HButton>
   </div>
   <div style="margin-bottom:20px;">
-    <SButton color="blue" rounded plain icon="search"></SButton>
-    <SButton color="green" rounded plain icon="edit"></SButton>
-    <SButton color="gray" rounded plain icon="check"></SButton>
-    <SButton color="yellow" rounded plain icon="message"></SButton>
-    <SButton color="red" rounded plain icon="delete"></SButton>
+    <HButton color="blue" rounded plain icon="search"></HButton>
+    <HButton color="green" rounded plain icon="edit"></HButton>
+    <HButton color="gray" rounded plain icon="check"></HButton>
+    <HButton color="yellow" rounded plain icon="message"></HButton>
+    <HButton color="red" rounded plain icon="delete"></HButton>
   </div>
 </template>
 ```
