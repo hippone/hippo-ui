@@ -10,7 +10,7 @@ describe("Button", () => {
         default: "Button",
       },
     });
-    expect(wrapper.text()).toBe("Button");
+    expect(wrapper.text()).toBe("");
   });
 });
 
@@ -18,7 +18,7 @@ describe("color", () => {
   test("default", () => {
     const wrapper = shallowMount(Button, {
       slot: {
-        default: "Button",
+        default: "",
       },
       prop: {
         color: "red",
@@ -28,7 +28,7 @@ describe("color", () => {
       wrapper
         .classes()
         .map((v) => v.replace("\n", ""))
-        .includes("bg-blue-500")
+        .includes("border-red-100")
     ).toBe(true);
   });
 });
