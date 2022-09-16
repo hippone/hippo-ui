@@ -16,7 +16,7 @@ const sidebar = {
     ]
 }
 const config = {
-    title: "🔨  Lee-UI",
+    title: "🔨  Hippo-UI",
     description: "组件库搭建的教学模型",
     themeConfig: {
         sidebar,

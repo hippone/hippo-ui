@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "module": "./dist/hippo-ui.mjs",
+  "homepage": "https://hippo-ui.vercel.app/",
   "scripts": {
     "test:run": "vitest run",
     "dev": "vite",
