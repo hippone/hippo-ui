@@ -34,9 +34,9 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "unocss": "^0.33.4",
-    "vitepress": "^0.22.4",
+    "vitepress":"0.22.4",
     "vitepress-theme-demoblock": "^1.4.2",
-    "vitest": "0.14.2"
+    "vitest": "0.23.2"
   },
   "dependencies": {
     "@types/fs-extra": "^9.0.13",

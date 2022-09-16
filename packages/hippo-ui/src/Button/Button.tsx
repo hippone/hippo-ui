@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from "vue/dist/vue.esm-bundler.js";
+import { defineComponent, PropType } from "vue";
 import "uno.css";
 export type IColor =
   | "black"
