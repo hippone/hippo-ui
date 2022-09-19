@@ -24,6 +24,11 @@ describe("color", () => {
         color: "gary",
       },
     });
-    expect(wrapper.classes().map(v => v.replace('\n','')).includes('bg-gary-500')).toBe(true)
+    expect(
+      wrapper
+        .classes()
+        .map((v) => v.replace("\n", ""))
+        .includes("bg-gary-500")
+    ).toBe(true);
   });
 });
