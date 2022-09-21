@@ -39,6 +39,9 @@
     <HButton color="yellow" rounded icon="message"></HButton>
     <HButton color="red" rounded icon="delete"></HButton>
   </div>
+  <div>
+    <HButton color="purple" disabled>Disabled</HButton>
+  </div>
 </template>
 ```
 
