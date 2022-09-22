@@ -6,7 +6,7 @@ createApp({
   <div>
     <div>
       <HButton >No color</HButton>
-      <HButton color="green" >绿色按钮</HButton>
+      <HButton color="green" shadow>绿色按钮</HButton>
       <HButton color="gray" >灰色按钮</HButton>
       <HButton color="yellow" >黄色按钮</HButton>
       <HButton color="yellow" size="superSpecialBig">superSpecialBig</HButton>
@@ -29,6 +29,10 @@ createApp({
       <HButton color="gray" size="superBig" icon="delete" rounded />
       <HButton color="yellow" icon="check" rounded />
       <HButton color="green" icon="add" rounded />
+    </div>
+    <div>
+      <HButton text disabled>text</HButton>
+      <HButton text disabled color="purple">text</HButton>
     </div>
   </div>`,
 })
