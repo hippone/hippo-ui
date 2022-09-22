@@ -24,15 +24,25 @@ export const props = {
   },
   disabled: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
+  text: {
+    type: Boolean,
+    default: false,
+  },
+  shadow: {
+    type: Boolean,
+    default: false,
+  },
 };
 
 export default defineComponent({
   name: "HButton",
   props,
   setup(props, { slots }) {
-    const size = {
+    const prop = props;
+    const { color, size, plain, rounded, icon, disabled, text, shadow } = prop;
+    const sizeSize = {
       small: {
         x: 1,
         y: 1,
@@ -50,46 +60,53 @@ export default defineComponent({
       },
       superBig: {
         x: 4,
-        y: 3,
+        y: 4,
         text: "xl",
       },
       superSpecialBig: {
         x: 6,
-        y: 4,
+        y: 5,
         text: "2xl",
       },
     };
     return () => (
       <button
-        disabled={props.disabled}
+        disabled={disabled}
         class={`
           font-mono
-          py-${size[props.size].y}
-          px-${size[props.size].x}
+          py-${sizeSize[size].y}
+          px-${sizeSize[size].x}
           font-semibold
-          shadow-md
-          ${props.rounded ? "rounded-full" : "rounded-lg"}
-          text-${size[props.size].text}
-          text-${props.color ? props.plain ? props.color : "white" : "gray"}-${props.disabled ? "300" : "500"}
-          focus:bg-${props.color || "blue"}-${props.color ? props.plain ? "400" : "300" : "100"}
-          focus:text-${props.color ? "white" : "blue"}-500
-          focus:border-${props.plain ? (props.color || "blue")+"-400" : "blue-300"}
-          ${props.disabled ? "disabled" : ""}
-          ${props.disabled ? `bg-${props.color}-200` : `bg-${props.color}-${props.plain ? "100" : "500"}`}
-          ${props.disabled ? "" : `hover:bg-${props.color || "blue"}-${props.color ? props.plain ? "400" : "300" : "100"}`}
-          ${props.disabled ? "" : `hover:text-${props.color ? "white" : "blue"}-500`}
-          ${props.disabled ? "" : `hover:border-${props.plain ? (props.color || "blue")+"-400" : "blue-300"}`}
-          ${props.disabled ? "cursor-not-allowed" : "cursor-pointer"}
-          border-${props.color || "gray"}-300
-          ${props.color ? props.plain ? "border-1.5" : "border-0" : "border-1.5"}
+          ${shadow ? "shadow-md" : ""}
+          ${rounded ? "rounded-full" : "rounded-lg"}
+          text-${sizeSize[size].text}
+          text-${color ? (plain || text ? color : "white") : "gray"}-${
+          disabled ? "300" : "500"
+        }
+          focus:bg-${text ? "gray" : color || "blue"}-${
+          color || text ? (plain ? "400" : "300") : "100"
+        }
+          focus:text-${color ? "white" : "blue"}-500
+          focus:border-${plain ? (color || "blue") + "-400" : "blue-300"}
+          ${
+            disabled
+              ? `disabled
+            bg-${text ? "white" : color}-200
+            cursor-not-allowed`
+              : `bg-${color && !text ? color : "white"}-${plain ? "100" : "500"}
+            hover:bg-${text ? "gray" : color || "blue"}-${
+                  color && !text ? (plain ? "400" : "300") : "100"
+                }
+            ${text ? "" : `hover:text-${color ? "white" : "blue"}-500`}
+            hover:border-${plain ? (color || "blue") + "-400" : "blue-300"}
+            cursor-pointer`
+          }
+          border-${color || "gray"}-300
+          ${(color && !plain) || text ? "border-0" : "border-1.5"}
           m-1
         `}
       >
-        {props.icon !== "" ? (
-          <i class={`i-ic-baseline-${props.icon} p-3`}></i>
-        ) : (
-          ""
-        )}
+        {icon !== "" ? <i class={`i-ic-baseline-${icon} p-3`}></i> : ""}
         {slots.default ? slots.default() : ""}
       </button>
     );
