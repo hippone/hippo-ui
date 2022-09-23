@@ -1,8 +1,9 @@
-# Button按钮 
-
-### 查看效果
+---
+ Button按钮: doc
+---
+## 查看效果
 ------
-使用 `color`、`plain`、`rounded`、`icon` 来定义按钮的样式。
+使用 `color`、`plain`、`rounded`、`icon`、`shadow` 来定义按钮的样式。
 :::demo 
 
 ```vue
@@ -34,11 +35,18 @@
     <HButton color="yellow" rounded icon="message"></HButton>
     <HButton color="red" rounded icon="delete"></HButton>
   </div>
+    <div style="margin-bottom:20px;">
+    <HButton shadow>white</HButton>
+    <HButton color="green" shadow>Green</HButton>
+    <HButton color="purple" shadow>purple</HButton>
+    <HButton color="yellow" shadow>yellow</HButton>
+    <HButton color="indigo">indigo</HButton>
+  </div>
 </template>
 ```
 
 :::
-### 禁用状态
+## 禁用状态
 你可以使用`disabled`属性来定义按钮是否被禁用
 :::demo 
 ```vue
@@ -62,7 +70,7 @@
 
 :::
 
-### 文字按钮
+## 文字按钮
 没有边框和背景色的按钮
 :::demo 
 ```vue
@@ -88,7 +96,7 @@
 
 :::
 
-### 图标按钮
+## 图标按钮
 使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。
 
 :::demo 
@@ -106,7 +114,7 @@
 
 :::
 
-### 调整尺寸
+## 调整尺寸
 提供了几个`size`属性，分别为`small`、`middle(默认)`、`large`、`superBig`、`superSpecialBig`
 
 :::demo 
@@ -138,8 +146,13 @@
 :::
 
 
-### API
+## API
 ---
+<style>
+  td, th {
+   border: none!important;
+}
+</style>
 |  属性名  | 说明 |  类型   |                     可选值                      | 默认值 |
 | :------: | :--: | :-----: | :---------------------------------------------: | :----: |
 |   size   | 尺寸 | string  |      `small` `large` `superBig` `superSpecialBig`       | middle |
