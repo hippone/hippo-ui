@@ -17,6 +17,7 @@
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "@vue/test-utils": "^2.0.0-rc.20",
+    "pnpm": "^8.6.12",
     "vite": "^3.0.4",
     "vitest": "0.14.2",
     "vue": "3.2.37"
